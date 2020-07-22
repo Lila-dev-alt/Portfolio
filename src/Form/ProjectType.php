@@ -29,7 +29,7 @@ class ProjectType extends AbstractType
             ])
             ->add('skills', EntityType::class, [
                 'class' => Skill::class,
-                'choice_label' => 'Skills',
+                'choice_label' => 'name',
                 'label' => 'Compétences',
                 'multiple' => true,
                 'expanded' => true,
