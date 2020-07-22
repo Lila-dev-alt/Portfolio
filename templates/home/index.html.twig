@@ -3,4 +3,20 @@
 {% block title %}{% endblock %}
 
 {% block body %}
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="{{ asset('build/elisa.png') }}" alt="elisa avatar" />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Elisa Bourg</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Développeuse Web - Full Stack</p>
+        </div>
+    </header>
 {% endblock %}
