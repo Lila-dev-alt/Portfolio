@@ -3,9 +3,12 @@
 {% block title %}New Skill{% endblock %}
 
 {% block body %}
-    <h1>Create new Skill</h1>
+    <div class="mt-5">
+    <h1 class="bg-warning text-center mt-5">Nouvelle compétence</h1>
 
     {{ include('skill/_form.html.twig') }}
 
-    <a href="{{ path('skill_index') }}">back to list</a>
+    <a class="btn bg-primary text-white" href="{{ path('skill_index') }}">Retour a la liste</a>
+    </div>
+
 {% endblock %}

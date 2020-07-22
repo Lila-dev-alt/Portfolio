@@ -5,9 +5,10 @@ $theme-colors: (
         "sucess": #D3D3D3,
 
 );
-
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
 
 @import "~bootstrap/scss/bootstrap";
-
 @import "theme";
 

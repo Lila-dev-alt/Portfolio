@@ -3,11 +3,13 @@
 {% block title %}Edit Skill{% endblock %}
 
 {% block body %}
-    <h1>Edit Skill</h1>
-
+    <h1 class="bg-warning text-center mt-3">Éditer une compétence</h1>
+<div class="container">
     {{ include('skill/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('skill_index') }}">back to list</a>
+    <div class="container d-flex justify-content-center">
+    <a class="btn bg-primary mr-2" href="{{ path('skill_index') }}">Retour à la liste</a>
 
     {{ include('skill/_delete_form.html.twig') }}
+    </div>
+</div>
 {% endblock %}
