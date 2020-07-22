@@ -3,26 +3,27 @@
 {% block title %}Skill index{% endblock %}
 
 {% block body %}
-    <h1>Skill index</h1>
+    <h1 class="text-center mt-3">Liste des compétences</h1>
+    <a class="btn bg-light ml-5" href="{{ path('skill_new') }}">Créer une nouvelle</a>
+<div class="container m-auto d-flex justify-content-center">
 
-    <table class="table">
-        <thead>
+
+    <table class=" table table-hover mt-5">
+        <thead class="bg-warning">
             <tr>
-                <th>Id</th>
-                <th>Name</th>
+                <th>Nom</th>
                 <th>Image</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for skill in skills %}
             <tr>
-                <td>{{ skill.id }}</td>
-                <td>{{ skill.name }}</td>
-                <td>{{ skill.image }}</td>
+                <td class="">{{ skill.name }}</td>
+                <td><img class="img-admin" src="{{ skill.image }}" alt="image of skill" ></td>
                 <td>
-                    <a href="{{ path('skill_show', {'id': skill.id}) }}">show</a>
-                    <a href="{{ path('skill_edit', {'id': skill.id}) }}">edit</a>
+                    <a class="btn bg-warning" href="{{ path('skill_show', {'id': skill.id}) }}">Voir</a>
+                    <a class="btn bg-primary text-white mt-1" href="{{ path('skill_edit', {'id': skill.id}) }}">Edit</a>
                 </td>
             </tr>
         {% else %}
@@ -32,6 +33,8 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
-    <a href="{{ path('skill_new') }}">Create new</a>
+
+
 {% endblock %}

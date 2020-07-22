@@ -3,32 +3,31 @@
 {% block title %}Education index{% endblock %}
 
 {% block body %}
-    <h1>Education index</h1>
-
-    <table class="table">
-        <thead>
+    <h1 class="text-center">Liste de mes formations</h1>
+    <a class="btn bg-light ml-5" href="{{ path('education_new') }}">Creer une formation</a>
+<div class="container m-auto d-flex justify-content-center">
+    <table class="table table-hover mt-5">
+        <thead class="bg-primary">
             <tr>
-                <th>Id</th>
-                <th>School</th>
-                <th>Degree</th>
-                <th>Description</th>
-                <th>FieldOfStudy</th>
-                <th>NumberOfyear</th>
-                <th>actions</th>
+                <th class="text-white">Ecole</th>
+                <th class="text-white">Diplôme</th>
+                <th class="text-white">Description</th>
+                <th class="text-white">Domaine d'études</th>
+                <th class="text-white">Temps d'études</th>
+                <th class="text-white">Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for education in education %}
             <tr>
-                <td>{{ education.id }}</td>
                 <td>{{ education.school }}</td>
                 <td>{{ education.degree }}</td>
                 <td>{{ education.description }}</td>
                 <td>{{ education.fieldOfStudy }}</td>
                 <td>{{ education.numberOfyear }}</td>
                 <td>
-                    <a href="{{ path('education_show', {'id': education.id}) }}">show</a>
-                    <a href="{{ path('education_edit', {'id': education.id}) }}">edit</a>
+                    <a class="btn bg-warning" href="{{ path('education_show', {'id': education.id}) }}">Voir</a>
+                    <a class="btn bg-primary text-white mt-1" href="{{ path('education_edit', {'id': education.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -39,5 +38,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('education_new') }}">Create new</a>
+</div>
 {% endblock %}

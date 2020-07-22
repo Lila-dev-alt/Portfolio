@@ -3,7 +3,6 @@ $theme-colors: (
         "danger": #A0D9D9,
         "warning":#D9B166,
         "sucess": #D3D3D3,
-
 );
 body {
   font-family: 'Nanum Gothic', sans-serif;
@@ -11,4 +10,14 @@ body {
 
 @import "~bootstrap/scss/bootstrap";
 @import "theme";
+
+table {
+  background-color: lightgray;
+}
+
+
+.img-admin {
+  max-width: 150px;
+  min-width: 150px;
+}
 

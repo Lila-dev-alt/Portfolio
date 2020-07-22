@@ -3,30 +3,29 @@
 {% block title %}Project index{% endblock %}
 
 {% block body %}
-    <h1>Project index</h1>
-
-    <table class="table">
-        <thead>
+    <h1 class="text-center">Liste de projet</h1>
+    <a class="btn bg-light ml-5" href="{{ path('project_new') }}">Create un nouveau</a>
+<div class="container m-auto d-flex justify-content-center">
+    <table class="table table-hover mt-3">
+        <thead class="bg-info">
             <tr>
-                <th>Id</th>
-                <th>Name</th>
+                <th>Nom</th>
                 <th>Description</th>
                 <th>Image</th>
-                <th>Link</th>
-                <th>actions</th>
+                <th>Lien</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for project in projects %}
             <tr>
-                <td>{{ project.id }}</td>
                 <td>{{ project.name }}</td>
                 <td>{{ project.description }}</td>
                 <td>{{ project.image }}</td>
                 <td>{{ project.link }}</td>
                 <td>
-                    <a href="{{ path('project_show', {'id': project.id}) }}">show</a>
-                    <a href="{{ path('project_edit', {'id': project.id}) }}">edit</a>
+                    <a  class="btn bg-warning" href="{{ path('project_show', {'id': project.id}) }}">Voir</a>
+                    <a  class="btn bg-primary text-white mt-1" href="{{ path('project_edit', {'id': project.id}) }}">Edit</a>
                 </td>
             </tr>
         {% else %}
@@ -36,6 +35,6 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
-    <a href="{{ path('project_new') }}">Create new</a>
 {% endblock %}
