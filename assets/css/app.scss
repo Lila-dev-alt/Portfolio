@@ -1,8 +1,13 @@
-body {
-    background-color: lightgray;
-}
+$theme-colors: (
+        "primary": #45858C,
+        "danger": #A0D9D9,
+        "warning":#D9B166,
+        "sucess": #D3D3D3,
 
-
+);
 
 
 @import "~bootstrap/scss/bootstrap";
+
+@import "theme";
+

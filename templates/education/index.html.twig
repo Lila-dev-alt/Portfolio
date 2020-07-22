@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Education index{% endblock %}
+
+{% block body %}
+    <h1>Education index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>School</th>
+                <th>Degree</th>
+                <th>Description</th>
+                <th>FieldOfStudy</th>
+                <th>NumberOfyear</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for education in education %}
+            <tr>
+                <td>{{ education.id }}</td>
+                <td>{{ education.school }}</td>
+                <td>{{ education.degree }}</td>
+                <td>{{ education.description }}</td>
+                <td>{{ education.fieldOfStudy }}</td>
+                <td>{{ education.numberOfyear }}</td>
+                <td>
+                    <a href="{{ path('education_show', {'id': education.id}) }}">show</a>
+                    <a href="{{ path('education_edit', {'id': education.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('education_new') }}">Create new</a>
+{% endblock %}
