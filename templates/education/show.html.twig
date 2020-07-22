@@ -3,20 +3,20 @@
 {% block title %}Education{% endblock %}
 
 {% block body %}
-    <h1>Education</h1>
-
-    <table class="table">
+    <h1 class="text-center mt-3">Formation</h1>
+<div class="container d-flex justify-content-center w-50">
+    <table class="table table-hover mt-5">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ education.id }}</td>
             </tr>
             <tr>
-                <th>School</th>
+                <th>Ecole</th>
                 <td>{{ education.school }}</td>
             </tr>
             <tr>
-                <th>Degree</th>
+                <th>Diplôme</th>
                 <td>{{ education.degree }}</td>
             </tr>
             <tr>
@@ -24,7 +24,7 @@
                 <td>{{ education.description }}</td>
             </tr>
             <tr>
-                <th>FieldOfStudy</th>
+                <th>Domaine</th>
                 <td>{{ education.fieldOfStudy }}</td>
             </tr>
             <tr>
@@ -33,10 +33,12 @@
             </tr>
         </tbody>
     </table>
+</div>
+<div class="bouttons d-flex justify-content-between mt-5 m-auto w-50 p-3">
+    <a class="text-dark btn bg-warning" href="{{ path('education_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('education_index') }}">back to list</a>
-
-    <a href="{{ path('education_edit', {'id': education.id}) }}">edit</a>
+    <a class="text-white btn btn-primary" href="{{ path('education_edit', {'id': education.id}) }}">Editer</a>
 
     {{ include('education/_delete_form.html.twig') }}
+</div>
 {% endblock %}
