@@ -33,6 +33,8 @@ class HomeController extends AbstractController
         $projectRepository = $this->getDoctrine()->getRepository(Project::class);
         $dbf = $projectRepository->findOneBy(['name' => "Easy-auto"] );
         $music = $projectRepository->findOneBy(['name' => "Wild Playlist"] );
+        $serie = $projectRepository->findOneBy(['name' => "Wild-series"] );
+        $circus = $projectRepository->findOneBy(['name' => "Wild Circus"] );
 
         return $this->render('home/my_projects.html.twig', [
             'controller_name' => 'HomeController',
@@ -40,6 +42,8 @@ class HomeController extends AbstractController
             'wild'       => $wild,
             'easy_auto' => $dbf,
             'music'     => $music,
+            'serie'     => $serie,
+            'circus'    => $circus,
         ]);
     }
 }
