@@ -7,7 +7,10 @@ use App\Entity\Education;
 use App\Entity\Project;
 use App\Entity\Skill;
 use App\Form\ContactFormType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -49,10 +52,14 @@ class HomeController extends AbstractController
             'circus'    => $circus,
         ]);
     }
+
     /**
-     * @Route("/contact-me", name="contact_me")
+     * @Route("/form_contact" ,  name="contact_me" , methods={"GET","POST"})
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @return RedirectResponse|Response
      */
-    public function contact(Request $request)
+    public function contact(Request $request, EntityManagerInterface $entityManager): Response
     {
         $contact = new Contact();
 
@@ -60,7 +67,7 @@ class HomeController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // $form->getData() holds the submitted values
+            $form->getData();
             // but, the original `$task` variable has also been updated
             $contact = $form->getData();
 

@@ -15,8 +15,7 @@
             <!-- Contact Section Form-->
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <div id="contactForm">
                         <div class="control-group">
                             {{ form_start(form) }}
                             <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -40,9 +39,9 @@
                             </div>
                         </div>
                         <br />
-                        <button class="btn btn-primary btn-xl"  type="submit">Send</button>
-                    </form>
+                        <button class="btn btn-primary btn-xl float-right"> Envoyer</button>
                     {{ form_end(form) }}
+                    </div>
                 </div>
             </div>
         </div>
