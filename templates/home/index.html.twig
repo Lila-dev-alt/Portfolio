@@ -6,7 +6,7 @@
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="{{ asset('build/elisa.png') }}" alt="elisa avatar" />
+            <img class="masthead-avatar mb-5" src="{{ asset('build/elisa.png') }}" alt="elisa avatar"/>
             <!-- Masthead Heading-->
             <h1 class="masthead-heading text-uppercase mb-0">Elisa Bourg</h1>
             <!-- Icon Divider-->
@@ -20,7 +20,7 @@
         </div>
     </header>
     <section class="page-section bg-success text-white mb-0" id="about">
-        <div class="container">
+        <div class="container mt-5">
             <!-- About Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-white">Compétences</h2>
             <!-- Icon Divider-->
@@ -32,26 +32,67 @@
             <!-- About Section Content-->
             <div class=" d-flex justify-content-around">
                 <div class="">
-                    <p class="lead"><i class="fas fa-star"></i> <i class="fas fa-star"></i></p>
-                    <img class="img-admin" src="{{ asset('build/php.png') }}" alt="php" >
-                        </div>
-                <div class=""><p class="lead">HTML</p>
-                    <img class="img-admin" src="{{ asset('build/symfony.png') }}" alt="html" >
+                    <img class="img-admin" src="{{ asset('build/php.png') }}" alt="php">
+                    <div class="d-flex flex-lg-row justify-content-center">
+                        <div><i class="fas fa-star"></i></div>
+                        <div><i class="fas fa-star"></i></div>
+                        <div><i class="fas fa-star"></i></div>
+                    </div>
                 </div>
-                <div class=""><p class="lead">Git  </p>
-                    <img class="img-admin" src="{{ asset('build/git.png') }}" alt="git" >
-                        </div>
-                <div class=""><p class="lead">HTML</p>
-                    <img class="img-admin" src="{{ asset('build/html.png') }}" alt="html" >
-                        </div>
+                <div class="">
+                    <img class="img-admin" src="{{ asset('build/symfony.png') }}" alt="html">
+                </div>
+                <div class="">
+                    <img class="img-admin" src="{{ asset('build/git.png') }}" alt="git">
+                </div>
+                <div class="">
+                    <img class="img-admin" src="{{ asset('build/html.png') }}" alt="html">
+                </div>
             </div>
             <!-- About Section Button-->
-            <div class="text-center mt-4">
+            <div class="text-center mb-5">
                 <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
-                    <i class="fas fa-download mr-2"></i>
-                    Free Download!
+                    <i class="fas fa-star"></i>
+                    Mes projets
                 </a>
             </div>
         </div>
     </section>
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Mon Linkedin </h4>
+                    <a href="https://www.linkedin.com/in/elisa-bourg-7848a9171/" >   <img class="img-admin" src="{{ asset('build/linkedin.png') }}" alt="html"></a>
+                    <p class="lead mb-0 mt-3">
+                        N'hésitez pas à me contacter
+                        <br/>
+                        pour des projets
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Mes hobbies</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-gamepad" aria-hidden="true"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-film" aria-hidden="true"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Mon github</h4>
+                <a href="https://github.com/Lila-dev-alt" >   <img class="img-admin" src="{{ asset('build/Github.png') }}" alt="html"></a>
+                    <p class="lead mb-0 mt-3">
+                       Afin d'accéder aux différents projets auxquels j'ai participé
+                        .
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><p>Copyright © Elisa Bourg 2020</p></div>
+    </div>
 {% endblock %}
