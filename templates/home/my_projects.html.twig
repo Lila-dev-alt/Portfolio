@@ -1,73 +1,61 @@
 {% extends 'base.html.twig' %}
-{%  block body %}
-<!-- Portfolio Section-->
-<section class="page-section portfolio" id="portfolio">
-    <div class="container">
-        <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-        <!-- Icon Divider-->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
-        </div>
-        <h4 class="text-center text-uppercase text-secondary mb-0">Mes formations</h4>
-        <!-- Portfolio Grid Items-->
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                   <div class="portfolio-item-caption-content text-center text-white">Wild Code School</div>
+{% block body %}
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <h4 class="text-center text-uppercase text-primary mb-0">Mes formations</h4>
+            <!-- Portfolio Grid Items-->
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">Wild Code School</div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset('build/ok.jpg') }}" alt="photo of school"/>
                     </div>
-                    <img class="img-fluid" src="{{ asset('build/ok.jpg') }}" alt="photo of school" />
+                    <div class="lead wild">
+                        <strong> Développeuse Web et Web Mobile</strong>
+                        <br>
+                        <p class="text-primary"> 3 ans</p>
+                        <p class="text-justify">
+                            J'ai décidé de me réorienter dans l'informatique après un stage. Cette formation me permet
+                            de
+                            créer des applications web. Je fais divers projets au cours de ma formation en PHP. Mon dernier projet était en Symfony.
+                        </p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">Kedge Business school
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset('build/kedge.png') }}" alt="photo of school"/>
+                    </div>
+                    <div class="lead wild">
+                        <strong> Développeuse Web et Web Mobile</strong>
+                        <br>
+                        <p class="text-primary"> 5 mois</p>
+                        <p class="text-justify">
+                            J'ai effectué un bachelor en commerce après le lycée avec une spécialisation Marketing. Cela m'a
+                            permis de partir 6 mois à Amsterdam pour un échange universitaire. J'ai aussi pu faire un stage
+                            qui m'a fait découvrir la gestion de projet.
+                        </p>
+                    </div>
+                </div>
 
-                </div>
-            </div>
-            <!-- Portfolio Item 2-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">Kedge Business school</div>
-                    </div>
-                    <img class="img-fluid" src="{{ asset('build/kedge.png') }}" alt="photo of school" />
-
-                </div>
-            <!-- Portfolio Item 3-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="" />
-                </div>
-            </div>
-            <!-- Portfolio Item 4-->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/game.png" alt="" />
-                </div>
-            </div>
-            <!-- Portfolio Item 5-->
-            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="" />
-                </div>
-            </div>
-            <!-- Portfolio Item 6-->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="" />
-                </div>
             </div>
         </div>
-    </div>
+        <h4 id="project" class="text-center text-uppercase text-primary mb-0">Mes projets</h4>
+
+    </section>
 {% endblock %}
