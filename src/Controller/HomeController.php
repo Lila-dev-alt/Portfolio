@@ -70,9 +70,6 @@ class HomeController extends AbstractController
             $form->getData();
             // but, the original `$task` variable has also been updated
             $contact = $form->getData();
-
-            // ... perform some action, such as saving the task to the database
-            // for example, if Task is a Doctrine entity, save it!
              $entityManager = $this->getDoctrine()->getManager();
              $entityManager->persist($contact);
              $entityManager->flush();

@@ -31,8 +31,8 @@
                 <td>{{ contact.email }}</td>
                 <td>{{ contact.message }}</td>
                 <td>
-                    <a class="btn bg-primary text-white">
-                       href="{{ path('contact_show', {'id': contact.id}) }}">show</a>
+                    <a class="btn bg-primary text-white"
+                       href="{{ path('contact_show', {'id': contact.id}) }}">Voir</a>
                 </td>
             </tr>
         {% else %}
