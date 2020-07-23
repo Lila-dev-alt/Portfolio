@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <!-- Portfolio Section-->
+    <!-- Formation Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
-            <!-- Portfolio Section Heading-->
+            <!-- Portfolio Section Head-->
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-            <!-- Icon Divider-->
+            <!-- Icon etoile-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -14,6 +14,7 @@
             <h4 class="text-center text-uppercase text-primary mb-0">Mes formations</h4>
             <!-- Portfolio Grid Items-->
             <div class="row d-flex justify-content-center mt-5">
+                <!-- Portfolio Grid Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -55,7 +56,56 @@
 
             </div>
         </div>
-        <h4 id="project" class="text-center text-uppercase text-primary mb-0">Mes projets</h4>
-
     </section>
+
+        <!-- Partie projets -->
+
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <h4 id="project" class="text-center text-uppercase text-primary mb-0">Mes projets</h4>
+            <!-- Portfolio Grid Items-->
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">Wild Code School</div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset('build/car.png') }}" alt="photo of school"/>
+                    </div>
+                    <div class="lead wild">
+                        <strong> Easy-Auto</strong>
+                        <br>
+                        <p class="text-primary"> 3 ans</p>
+                        <p class="text-justify">
+                            J'ai décidé de me réorienter dans l'informatique après un stage. Cette formation me permet
+                            de
+                            créer des applications web. Je fais divers projets au cours de ma formation en PHP. Mon dernier projet était en Symfony.
+                        </p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">Kedge Business school
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="{{ asset('build/music.jpg') }}" alt="photo of school"/>
+                    </div>
+                    <div class="lead wild">
+                        <strong> Wild Playlist</strong>
+                        <br>
+                        <p class="text-primary"> 5 mois</p>
+                        <p class="text-justify">
+                            J'ai effectué un bachelor en commerce après le lycée avec une spécialisation Marketing. Cela m'a
+                            permis de partir 6 mois à Amsterdam pour un échange universitaire. J'ai aussi pu faire un stage
+                            qui m'a fait découvrir la gestion de projet.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
