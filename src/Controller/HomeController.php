@@ -46,4 +46,11 @@ class HomeController extends AbstractController
             'circus'    => $circus,
         ]);
     }
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+
+    }
 }
