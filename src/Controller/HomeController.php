@@ -2,11 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\Education;
 use App\Entity\Project;
 use App\Entity\Skill;
+use App\Form\ContactFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class HomeController extends AbstractController
 {
@@ -47,10 +50,31 @@ class HomeController extends AbstractController
         ]);
     }
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/contact-me", name="contact_me")
      */
-    public function contact()
+    public function contact(Request $request)
     {
+        $contact = new Contact();
 
+        $form = $this->createForm(ContactFormType::class, $contact);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $form->getData() holds the submitted values
+            // but, the original `$task` variable has also been updated
+            $contact = $form->getData();
+
+            // ... perform some action, such as saving the task to the database
+            // for example, if Task is a Doctrine entity, save it!
+             $entityManager = $this->getDoctrine()->getManager();
+             $entityManager->persist($contact);
+             $entityManager->flush();
+
+            return $this->redirectToRoute('contact_me');
+        }
+        return $this->render('home/form.html.twig', [
+            'controller_name' => 'HomeController',
+            'form'     => $form->createView(),
+        ]);
     }
 }
