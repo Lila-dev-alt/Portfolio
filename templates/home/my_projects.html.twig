@@ -18,18 +18,16 @@
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">Wild Code School</div>
+                            <div class="portfolio-item-caption-content text-center text-white">{{ wild.school }}</div>
                         </div>
                         <img class="img-fluid" src="{{ asset('build/ok.jpg') }}" alt="photo of school"/>
                     </div>
                     <div class="lead wild">
-                        <strong> Développeuse Web et Web Mobile</strong>
+                        <strong>{{ wild.degree }}</strong>
                         <br>
-                        <p class="text-primary"> 3 ans</p>
+                        <p class="text-primary">{{ wild.numberOfyear }} mois</p>
                         <p class="text-justify">
-                            J'ai décidé de me réorienter dans l'informatique après un stage. Cette formation me permet
-                            de
-                            créer des applications web. Je fais divers projets au cours de ma formation en PHP. Mon dernier projet était en Symfony.
+                            {{ wild.description }}
                         </p>
                     </div>
                 </div>
@@ -37,19 +35,17 @@
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">Kedge Business school
+                            <div class="portfolio-item-caption-content text-center text-white">{{ kedge.school }}
                             </div>
                         </div>
                         <img class="img-fluid" src="{{ asset('build/kedge.png') }}" alt="photo of school"/>
                     </div>
                     <div class="lead wild">
-                        <strong> Développeuse Web et Web Mobile</strong>
+                        <strong>{{ kedge.degree }}</strong>
                         <br>
-                        <p class="text-primary"> 5 mois</p>
+                        <p class="text-primary"> {{ kedge.numberOfyear }} ans</p>
                         <p class="text-justify">
-                            J'ai effectué un bachelor en commerce après le lycée avec une spécialisation Marketing. Cela m'a
-                            permis de partir 6 mois à Amsterdam pour un échange universitaire. J'ai aussi pu faire un stage
-                            qui m'a fait découvrir la gestion de projet.
+                           {{ kedge.description }}
                         </p>
                     </div>
                 </div>
@@ -62,24 +58,26 @@
 
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
-            <h4 id="project" class="text-center text-uppercase text-primary mb-0">Mes projets</h4>
+            <h3 id="project" class="text-center text-uppercase text-primary mb-0">Mes projets</h3>
             <!-- Portfolio Grid Items-->
             <div class="row d-flex justify-content-center mt-3">
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">Wild Code School</div>
+                            <div class="portfolio-item-caption-content text-center text-white">{{ easy_auto.name }}</div>
                         </div>
                         <img class="img-fluid" src="{{ asset('build/car.png') }}" alt="photo of school"/>
                     </div>
                     <div class="lead wild">
-                        <strong> Easy-Auto</strong>
+                        <strong> {{ easy_auto.name }}</strong>
                         <br>
-                        <p class="text-primary"> 3 ans</p>
+                        <p class="text-primary">Site de gestionnaire d'appels</p>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="{{ music.link }}"><i class="fas fa-link"></i></a>
                         <p class="text-justify">
-                            J'ai décidé de me réorienter dans l'informatique après un stage. Cette formation me permet
-                            de
-                            créer des applications web. Je fais divers projets au cours de ma formation en PHP. Mon dernier projet était en Symfony.
+                             {{ easy_auto.description }}
+                        </p>
+                        <br>
+                        <p class="text-primary"> Langage/Framework: PHP/Symfony
                         </p>
                     </div>
                 </div>
@@ -87,19 +85,22 @@
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">Kedge Business school
+                            <div class="portfolio-item-caption-content text-center text-white">{{ music.name }}
                             </div>
                         </div>
                         <img class="img-fluid" src="{{ asset('build/music.jpg') }}" alt="photo of school"/>
                     </div>
-                    <div class="lead wild">
-                        <strong> Wild Playlist</strong>
+                    <div class="lead wild mt-5">
+                        <strong> {{ music.name }}</strong>
                         <br>
-                        <p class="text-primary"> 5 mois</p>
+                        <p class="text-primary">Site de playlist</p>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="{{ music.link }}"><i class="fas fa-link"></i></a>
                         <p class="text-justify">
-                            J'ai effectué un bachelor en commerce après le lycée avec une spécialisation Marketing. Cela m'a
-                            permis de partir 6 mois à Amsterdam pour un échange universitaire. J'ai aussi pu faire un stage
-                            qui m'a fait découvrir la gestion de projet.
+                          {{ music.description }}
+
+                        </p>
+                        <br>
+                        <p class="text-primary"> Langage/Framework: PHP/Simple MVC/Boostrap
                         </p>
                     </div>
                 </div>
