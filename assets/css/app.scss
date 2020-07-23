@@ -1,8 +1,33 @@
+$theme-colors: (
+        "primary": #45858C,
+        "danger": #A0D9D9,
+        "warning":#D9B166,
+        "success": #1abc9c,
+        "secondary": #2c3e50,
+);
 body {
-    background-color: lightgray;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+@import "~bootstrap/scss/bootstrap";
+@import "theme";
+
+table {
+  background-color: lightgray;
 }
 
 
+.img-admin {
+  max-width: 150px;
+  min-width: 150px;
+}
 
+#login {
+  width: 30%;
+}
 
-@import "~bootstrap/scss/bootstrap";
+div.lead.wild {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 4px solid #1abc9c;
+}
